@@ -38,9 +38,9 @@ use App\Http\Controllers\UserController;
 //     return view('client.shop.shop');
 // });
 
-// Route::get('/login', function () {
-//     return view('client.login');
-// });
+Route::get('/login', function () {
+    return view('client.login');
+});
 
 // Route::get('/admin', function () {
 //     return view('admin.base');
@@ -70,8 +70,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 Route::get('home', [ClientController::class, 'showHome']);
 Route::get('cart', [ClientController::class, 'showCart']);
 Route::get('shop', [ClientController::class, 'showShop']);
-Route::post('shop/filter', [ClientController::class, 'filter']);
 Route::get('product', [ClientController::class, 'showProduct']);
+Route::get('checkout', [ClientController::class, 'showCheckout']);
 Route::get('product/{produk}', [ClientController::class, 'showProduct']);
 
 // usertable

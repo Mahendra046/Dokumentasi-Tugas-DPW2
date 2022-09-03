@@ -37,4 +37,9 @@ class ClientController extends Controller
         return view('client.product.product', $data);
     }
 
+    function showCheckout()
+    {
+        return view('client.checkout.checkout');
+    }
+
 }

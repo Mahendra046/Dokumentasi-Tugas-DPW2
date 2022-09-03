@@ -1,3 +1,8 @@
+@php
+    function checkRouteActive($route){
+    if(Route::current()->uri == $route) return 'active';
+    }
+@endphp
 <header class="header-area clearfix">
             <!-- Close Icon -->
             <div class="nav-close">
@@ -10,11 +15,11 @@
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li class="active"><a href="{{url("home")}}">Beranda</a></li>
-                    <li><a href="{{url("shop")}}">Toko</a></li>
-                    <li><a href="{{url("cart")}}">Keranjang</a></li>
-                    <li><a href="{{url("checkout")}}">Checkout</a></li>
-                    <li><a href="{{url("login")}}">Login</a></li>
+                    <li class="{{checkRouteActive('home')}}"><a href="{{url("home")}}">Beranda</a></li>
+                    <li class="{{checkRouteActive('shop')}}"><a href="{{url("shop")}}">Toko</a></li>
+                    <li class="{{checkRouteActive('cart')}}"><a href="{{url("cart")}}">Keranjang</a></li>
+                    <li class="{{checkRouteActive('checkout')}}"><a href="{{url("checkout")}}">Checkout</a></li>
+                    <li class="{{checkRouteActive('')}}"><a href="{{url("login")}}">Login</a></li>
                 </ul>
             </nav>
             <!-- Button Group -->
