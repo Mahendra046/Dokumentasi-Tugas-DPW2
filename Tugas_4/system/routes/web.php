@@ -66,3 +66,4 @@ Route::get('/product-details', [ClientController::class, 'showDetail']);
 Route::get('/shop', [ClientController::class, 'showShop']);
 Route::get('/cart', [ClientController::class, 'showcart']);
 Route::get('/checkout', [ClientController::class, 'showCheckout']);
+// client
